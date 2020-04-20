@@ -5,10 +5,18 @@
 
     <head>
 
+
 	<style>	
+	
+	/*Set all h2 colors to the global variable and set the font*/
+	:root{
+	--base-text-color: yellow
+	}
+
+	/*Set font and use the color from the global variable on all h2 objects*/
   	h2 {
     	font-family: Lobster, monospace;
-	color:blue;
+	color: var(--base-text-color);
   	}
 
   	p {
@@ -16,8 +24,8 @@
     	font-family: monospace;
   	}
 
-  	.red-text {
-	color:pink;
+  	.standard-text {
+	color:var(--base-text-color);
 	}
 
   	.silver-background {
@@ -65,7 +73,7 @@
 	</p>
 
 	<!--Use the stypes defined in the red-text class on this paragraph-->
-	<p class="red-text">
+	<p class="standard-text">
 	test
 	</p>
 
